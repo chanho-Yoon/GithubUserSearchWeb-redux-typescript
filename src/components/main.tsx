@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import SearchForm from "./Search/searchForm";
 import TabMenu from "./Tab/tabMenu";
+import ApiList from "./List/apiList";
+import UserList from "./List/userList";
 
 const Main = () => {
    return (
@@ -11,6 +13,7 @@ const Main = () => {
          </Header>
          <TabMenu />
          <SearchForm />
+         <UserList />
       </Wrapper>
    );
 };
