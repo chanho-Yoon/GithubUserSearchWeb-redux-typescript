@@ -40,6 +40,7 @@ export type User = {
    type: string
    url: string
 }
+export type UserObj = { user: User };
 
 type ActionUser = User[];
 
@@ -48,7 +49,7 @@ const initialState: ActionUser = []
 function users(state = initialState, action: UserActionType) {
    switch (action.type) {
       case GET_USERS:
-         return state=action.payload
+         return state = action.payload
       case GET_FAVORITES:
          return
       case SEARCH_FAVORITES:
