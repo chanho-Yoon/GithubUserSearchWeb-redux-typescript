@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import SearchForm from "./Search/searchForm";
 import TabMenu from "./Tab/tabMenu";
-import ApiList from "./List/apiList";
 import UserList from "./List/userList";
 
 const Main = () => {
@@ -23,15 +22,16 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 700px;
     max-width: 800px;
     min-width: 600px;
+    height: 100%;
     margin: 40px;
     padding: 20px;
     background-color: #fcfcfc;
-    border-radius: 6%;
+    border-radius: 35px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `
+
 const Header = styled.header`
     width: 50%;
     height: 35px;
