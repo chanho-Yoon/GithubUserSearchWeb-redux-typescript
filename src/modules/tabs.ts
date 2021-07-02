@@ -15,7 +15,7 @@ const initialState: ActionTab = {
 function tabs(state = initialState, action: TabActionType) {
    switch (action.type) {
       case TAB_CLICK_NUMBER:
-         return state.no = action.payload
+         return {...state, no: action.payload}
       default:
          return state;
    }
