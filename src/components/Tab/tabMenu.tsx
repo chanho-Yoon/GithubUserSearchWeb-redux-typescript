@@ -1,14 +1,21 @@
 import React from 'react';
 import styled, {keyframes} from "styled-components";
+import useTabSelect from "../../hooks/actions/useTabSelect";
+import useGetTabIndex from "../../hooks/actions/useTab";
 
 
 const TabMenu = () => {
+   const tabSelect = useTabSelect();
+   const tabIdx = useGetTabIndex();
+   const onClick = (e: React.SyntheticEvent<HTMLButtonElement>) => {
+      tabSelect(Number(e.currentTarget.dataset['index']));
+   }
    return (
       <Wrapper>
-         <button className='active'>
+         <button className={tabIdx === 1 ? 'active' : ''} data-index={1} onClick={onClick}>
             <span>유저(Name) 검색</span>
          </button>
-         <button>
+         <button className={tabIdx === 2 ? 'active' : ''} data-index={2} onClick={onClick}>
             <span>즐겨찾기</span>
          </button>
       </Wrapper>
