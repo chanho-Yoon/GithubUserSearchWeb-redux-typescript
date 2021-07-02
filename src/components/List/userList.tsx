@@ -6,13 +6,10 @@ import useGetTabIndex from "../../hooks/actions/useTab";
 
 const UserList = () => {
    const tabIndex = useGetTabIndex();
+
    return (
       <Wrapper>
-         {tabIndex === 1 ? (
-            <ApiList />
-         ) : (
-            <LocalList />
-         )}
+         {tabIndex === 1 ? <ApiList /> : <LocalList />}
       </Wrapper>
    );
 };

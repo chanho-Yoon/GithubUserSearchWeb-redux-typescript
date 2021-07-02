@@ -12,7 +12,6 @@ const useSearchUsers = () => {
          page: 1,
          per_page: 100
       });
-      // console.log(response.data.items);
       dispatch(getUsers(response.data.items))
    }, [dispatch])
 }

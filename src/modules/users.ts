@@ -14,7 +14,7 @@ const REMOVE_FAVORITES = 'favorites/REMOVE_FAVORITES' as const
 
 // Action Function
 export const getUsers = (userDatas: User[]) => ({type: GET_USERS, payload: userDatas})
-export const getFavorites = () => ({type: GET_FAVORITES})
+export const getFavorites = (favoriteUserDatas: FavoriteUser[]) => ({type: GET_FAVORITES, payload: favoriteUserDatas})
 export const searchFavorites = (searchWord: string) => ({type: SEARCH_FAVORITES, payload: searchWord})
 export const addFavorites = (userData: User) => ({type: ADD_FAVORITES, payload: userData})
 export const removeFavorites = (id: number) => ({type: REMOVE_FAVORITES, payload: id})
@@ -39,7 +39,16 @@ export type User = {
    subscriptions_url: string
    type: string
    url: string
+   isFirstWord?: string
 }
+
+export type FavoriteUser = {
+   avatar_url: string
+   id: number
+   login: string
+   html_url: string
+}
+
 export type UserObj = { user: User };
 
 type ActionUser = User[];
@@ -49,7 +58,20 @@ const initialState: ActionUser = []
 function users(state = initialState, action: UserActionType) {
    switch (action.type) {
       case GET_USERS:
-         return state = action.payload
+         let acc = '_';
+         const sortUsers = action.payload.sort((a, b) => {
+            return a.login < b.login ? -1 : 1
+         })
+         return sortUsers.map((data) => {
+               if (acc !== data.login.slice(0, 1)) {
+                  acc = data.login.slice(0, 1);
+                  return {...data, isFirstWord: data.login.slice(0, 1)}
+               } else {
+                  return data;
+               }
+            }
+         );
+
       case GET_FAVORITES:
          return
       case SEARCH_FAVORITES:
