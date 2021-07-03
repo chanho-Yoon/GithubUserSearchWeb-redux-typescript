@@ -1,5 +1,6 @@
 # GithubUserSearchWeb (reactm redux, typescript) 버전
-깃허브 유저이름으로 아이디를 찾는 간단한 웹 
+깃허브 유저이름으로 아이디를 찾는 간단한 웹
+> 리덕스를 사용할 필요는 없는 프로젝트지만 공부 목적으로 사용하였습니다.
 
 ## 사용한 기술
 - React, styled-component, redux, typescript
