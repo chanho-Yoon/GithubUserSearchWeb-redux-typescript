@@ -1,24 +1,27 @@
-type TabActionType = | ReturnType<typeof tabClickNumber>
+type TabActionType = ReturnType<typeof tabClickNumber>;
 
-const TAB_CLICK_NUMBER = 'actions/TAB_CLICK_NUMBER' as const
+const TAB_CLICK_NUMBER = <const>'actions/TAB_CLICK_NUMBER';
 
-export const tabClickNumber = (tab: number) => ({type: TAB_CLICK_NUMBER, payload: tab})
+export const tabClickNumber = (tab: number) => ({
+  type: TAB_CLICK_NUMBER,
+  payload: tab,
+});
 
 type ActionTab = {
-   no: number;
-}
+  no: number;
+};
 
 const initialState: ActionTab = {
-   no: 1
-}
+  no: 1,
+};
 
 function tabs(state = initialState, action: TabActionType) {
-   switch (action.type) {
-      case TAB_CLICK_NUMBER:
-         return {...state, no: action.payload}
-      default:
-         return state;
-   }
+  switch (action.type) {
+    case TAB_CLICK_NUMBER:
+      return { ...state, no: action.payload };
+    default:
+      return state;
+  }
 }
 
 export default tabs;

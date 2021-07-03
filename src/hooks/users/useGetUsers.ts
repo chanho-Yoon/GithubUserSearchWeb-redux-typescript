@@ -1,6 +1,6 @@
-import {useSelector} from "react-redux";
-import {RootState} from "../../modules";
+import { useSelector } from 'react-redux';
+import { RootState } from '../../modules';
 
 export default function useGetUsers() {
-   return useSelector((state: RootState) => state.users)
+  return useSelector((state: RootState) => state.users);
 }

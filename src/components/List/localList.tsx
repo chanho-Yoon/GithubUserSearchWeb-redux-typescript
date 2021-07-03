@@ -1,11 +1,11 @@
 import React from 'react';
 
 const LocalList = () => {
-   return (
-      <div>
-         LocalList
-      </div>
-   );
+  return (
+    <div>
+      <span>LocalList</span>
+    </div>
+  );
 };
 
 export default LocalList;
