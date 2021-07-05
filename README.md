@@ -12,17 +12,26 @@
 ### 1
 <img src="https://user-images.githubusercontent.com/54402926/123619788-807d4080-d844-11eb-9186-04d8b8d6a7f9.png" width="350" height="300"/>
 
-- 초기세팅 완료 후 전체적인 레이아웃 완성해 가는 중
+- (✅) 초기세팅 완료 후 전체적인 레이아웃 완성해 가는 중
 
 ### 2
 
 <img src="https://user-images.githubusercontent.com/54402926/123739783-2f238e80-d8e2-11eb-87f6-5f71fe05659d.png" width="650" height="300"/>
 
-- github 검색 API 연동 및 커스텀 hooks 작성 / apiList, localList 컴포넌트를 분리하여 userList에서 조건부 렌더링으로 해당하는 리스트가 보여질 수 있도록 구현
+- (✅) github 검색 API 연동 및 커스텀 hooks 작성 / apiList, localList 컴포넌트를 분리하여 userList에서 조건부 렌더링으로 해당하는 리스트가 보여질 수 있도록 구현
 
 ### 3
 
 <img src="https://user-images.githubusercontent.com/54402926/124270002-90639000-db76-11eb-9ea4-0af46a9ff7ce.png" width="400" height="450"/>
 
-- 각 리스트 sort로 정렬 후 로그인 아이디 첫 초성을 기준으로 첫 번째 아이템에 시작하는 문자가 나오도록 구현
-- 즐겨찾기 등록 및 삭제 , 즐겨찾기 등록이 되어있는 아이템은 다시 검색시에 버튼이 활성화 되어있도록 구현
+- (✅) 각 리스트 sort로 정렬 후 로그인 아이디 첫 초성을 기준으로 첫 번째 아이템에 시작하는 문자가 나오도록 구현
+- (✅) 즐겨찾기 등록 및 삭제 , 즐겨찾기 등록이 되어있는 아이템은 다시 검색시에 버튼이 활성화 되어있도록 구현
+
+### 4
+
+<img src="https://user-images.githubusercontent.com/54402926/124447090-01e05000-ddbc-11eb-9b6e-69f8322e934e.png" width="400" height="450"/>
+
+- (✅) `users(검색 유저)` 상태와 `favorites(즐겨찾기)`상태를 나눠서 관리
+- (✅) 즐겨찾기 기능 구현 **유저 검색** 부분과 **즐겨찾기** 부분이 서로 연동되어 양쪽에서 즐겨찾기 추가 삭제시 실시간으로 반영됨
+- (✅) 새로고침시 state로 초기화가 되지만 로컬스토리지에 저장된 정보를 그대로 `favorites` 상태에 다시 저장 및 출력이 될 수 있도록 구현
+- (🔧) 즐겨찾기 검색 부분 기능 구현 예정
