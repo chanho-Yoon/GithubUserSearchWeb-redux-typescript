@@ -1,37 +1,12 @@
-type UserActionType =
-  | ReturnType<typeof getUsers>
-  | ReturnType<typeof getFavorites>
-  | ReturnType<typeof searchFavorites>
-  | ReturnType<typeof addFavorites>
-  | ReturnType<typeof removeFavorites>;
+type UserActionType = ReturnType<typeof getUsers>;
 
 // Action type
 const GET_USERS = <const>'search/GET_USERS';
-const GET_FAVORITES = <const>'favorites/GET_FAVORITES';
-const SEARCH_FAVORITES = <const>'favorites/SEARCH_FAVORITES';
-const ADD_FAVORITES = <const>'favorites/ADD_FAVORITES';
-const REMOVE_FAVORITES = <const>'favorites/REMOVE_FAVORITES';
 
 // Action Function
 export const getUsers = (userDatas: User[]) => ({
   type: GET_USERS,
   payload: userDatas,
-});
-export const getFavorites = (favoriteUserDatas: FavoriteUser[]) => ({
-  type: GET_FAVORITES,
-  payload: favoriteUserDatas,
-});
-export const searchFavorites = (searchWord: string) => ({
-  type: SEARCH_FAVORITES,
-  payload: searchWord,
-});
-export const addFavorites = (userData: User) => ({
-  type: ADD_FAVORITES,
-  payload: userData,
-});
-export const removeFavorites = (id: number) => ({
-  type: REMOVE_FAVORITES,
-  payload: id,
 });
 
 export type User = {
@@ -70,30 +45,25 @@ type ActionUser = User[];
 
 const initialState: ActionUser = [];
 
+function firstWordSort(item: User[]) {
+  let acc = '_';
+  const sortUsers = item.sort((a, b) => {
+    return a.login < b.login ? -1 : 1;
+  });
+  return sortUsers.map((data) => {
+    if (acc !== data.login.slice(0, 1)) {
+      acc = data.login.slice(0, 1);
+      return { ...data, isFirstWord: data.login.slice(0, 1) };
+    } else {
+      return data;
+    }
+  });
+}
+
 function users(state = initialState, action: UserActionType) {
   switch (action.type) {
     case GET_USERS:
-      let acc = '_';
-      const sortUsers = action.payload.sort((a, b) => {
-        return a.login < b.login ? -1 : 1;
-      });
-      return sortUsers.map((data) => {
-        if (acc !== data.login.slice(0, 1)) {
-          acc = data.login.slice(0, 1);
-          return { ...data, isFirstWord: data.login.slice(0, 1) };
-        } else {
-          return data;
-        }
-      });
-
-    case GET_FAVORITES:
-      return;
-    case SEARCH_FAVORITES:
-      return;
-    case ADD_FAVORITES:
-      return;
-    case REMOVE_FAVORITES:
-      return;
+      return firstWordSort(action.payload);
     default:
       return state;
   }
