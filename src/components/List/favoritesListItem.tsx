@@ -5,7 +5,7 @@ import useRemoveLocalDatas from '../../hooks/localstorage/useRemoveLocalDatas';
 import { FavoritesObj } from '../../modules/favorites';
 import useRemoveFavorites from '../../hooks/favorites/useRemoveFavorites';
 
-const LocalListItem = (item: FavoritesObj) => {
+const FavoritesListItem = (item: FavoritesObj) => {
   const removeLocalStorageItems = useRemoveLocalDatas();
   const removeFavorites = useRemoveFavorites();
   const onClick = () => {
@@ -26,7 +26,7 @@ const LocalListItem = (item: FavoritesObj) => {
   );
 };
 
-export default LocalListItem;
+export default FavoritesListItem;
 
 const Li = styled.li`
   position: relative;

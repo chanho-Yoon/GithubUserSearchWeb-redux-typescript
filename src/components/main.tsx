@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SearchForm from './Search/searchForm';
 import TabMenu from './Tab/tabMenu';
-import UserList from './List/userList';
+import MainList from './List/mainList';
 
 const Main = () => {
   return (
@@ -12,7 +12,7 @@ const Main = () => {
       </Header>
       <TabMenu />
       <SearchForm />
-      <UserList />
+      <MainList />
     </Wrapper>
   );
 };
