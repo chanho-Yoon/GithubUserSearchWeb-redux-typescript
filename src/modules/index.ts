@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 import users from './users';
 import tabs from './tabs';
+import favorites from './favorites';
 
-const rootReducer = combineReducers({ users, tabs });
+const rootReducer = combineReducers({ users, favorites, tabs });
 
 export default rootReducer;
 
