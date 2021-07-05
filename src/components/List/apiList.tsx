@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import useGetUsers from '../../hooks/users/useGetUsers';
-import ListItem from './listItem';
+import { User } from '../../modules/users';
+import UserListItem from './userListItem';
 
 const ApiList = () => {
   const users = useGetUsers();
   return (
     <Wrapper>
       <ul>
-        {users?.map((item) => (
-          <ListItem key={item.id} user={item} />
+        {users?.map((item: User) => (
+          <UserListItem key={item.id} user={item} />
         ))}
       </ul>
     </Wrapper>
