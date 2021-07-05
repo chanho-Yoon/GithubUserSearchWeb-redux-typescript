@@ -2,16 +2,19 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { AiOutlineSearch } from 'react-icons/ai';
 import useSearchUsers from '../../hooks/users/useSearchUsers';
+import useGetTabIndex from '../../hooks/actions/useTab';
 
 const SearchForm = () => {
   const [value, setValue] = useState('');
   const getUsers = useSearchUsers();
+  const getTabIndex = useGetTabIndex();
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    getUsers(value);
+    if (getTabIndex === 1) getUsers(value);
+    setValue('');
   };
 
   return (
