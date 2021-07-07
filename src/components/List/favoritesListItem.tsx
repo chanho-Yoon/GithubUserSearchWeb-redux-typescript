@@ -4,17 +4,19 @@ import { FaGithubAlt } from 'react-icons/fa';
 import useRemoveLocalDatas from '../../hooks/localstorage/useRemoveLocalDatas';
 import { FavoritesObj } from '../../modules/favorites';
 import useRemoveFavorites from '../../hooks/favorites/useRemoveFavorites';
+import useGetSearch from '../../hooks/search/useGetSearch';
 
 const FavoritesListItem = (item: FavoritesObj) => {
   const removeLocalStorageItems = useRemoveLocalDatas();
   const removeFavorites = useRemoveFavorites();
+  const searchWord = useGetSearch();
   const onClick = () => {
-    removeLocalStorageItems(item.user.id);
     removeFavorites(item.user.id);
+    removeLocalStorageItems(item.user.id);
   };
   return (
     <Li>
-      {item.user.isFirstWord !== '' && (
+      {item.user.isFirstWord !== '' && searchWord['word'] === '' && (
         <span className="first_word">{item.user.isFirstWord}</span>
       )}
       <img src={item.user.avatar_url} alt="profile_image" />

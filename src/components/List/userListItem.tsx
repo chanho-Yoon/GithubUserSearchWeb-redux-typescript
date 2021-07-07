@@ -40,6 +40,7 @@ const UserListItem = (item: UserObj) => {
         subscriptions_url: item.user.subscriptions_url,
         type: item.user.type,
         url: item.user.url,
+        name: item.user.name,
       });
       setToggle((toggle) => !toggle);
     }
