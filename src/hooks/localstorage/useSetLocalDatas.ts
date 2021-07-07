@@ -30,6 +30,7 @@ export default function useSetLocalDatas() {
         subscriptions_url: item.subscriptions_url,
         type: item.type,
         url: item.url,
+        name: item.name,
       };
       const localStorageItem = getLocalStorageItems();
 

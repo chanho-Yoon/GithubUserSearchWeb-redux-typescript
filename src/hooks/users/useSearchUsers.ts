@@ -13,7 +13,7 @@ const useSearchUsers = () => {
         page: 1,
         per_page: 100,
       });
-      dispatch(getUsers(response.data.items));
+      dispatch(getUsers(response.data.items, searchWord));
     },
     [dispatch],
   );

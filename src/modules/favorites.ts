@@ -49,6 +49,7 @@ export type Favorites = {
   type: string;
   url: string;
   isFirstWord?: string;
+  name?: string;
 };
 
 export type FavoritesObj = { user: Favorites };
@@ -58,12 +59,20 @@ type ActionFavorites = Favorites[];
 const initialState: ActionFavorites = [];
 
 // 리스트 아이템 첫 단어만 출력할 수 있도록 정렬하는 함수
-function FavoritesFirstWordSort(item: Favorites[]) {
+function favoritesFirstWordSort(item: Favorites[]) {
   let acc = '';
+  if (item.length === 0) {
+    return [];
+  }
+
   const sortFavorites = item.sort((a, b) => {
     return a.login < b.login ? -1 : 1;
   });
-  return sortFavorites.map((data) => {
+  const resetFirstWord = sortFavorites.map((data) => {
+    return { ...data, isFirstWord: '' };
+  });
+
+  return resetFirstWord.map((data) => {
     if (acc !== data.login.slice(0, 1)) {
       acc = data.login.slice(0, 1);
       return { ...data, isFirstWord: data.login.slice(0, 1) };
@@ -76,17 +85,18 @@ function FavoritesFirstWordSort(item: Favorites[]) {
 function favorites(state = initialState, action: FavoritesActionType) {
   switch (action.type) {
     case GET_FAVORITES:
-      return FavoritesFirstWordSort(action.payload);
-    case SEARCH_FAVORITES:
-      return;
+      return favoritesFirstWordSort(action.payload);
+
     case ADD_FAVORITES:
       const bindFavorites = [...state, action.payload];
-      return FavoritesFirstWordSort(bindFavorites);
+      return favoritesFirstWordSort(bindFavorites);
+
     case REMOVE_FAVORITES:
-      const filterFavorites = state.filter(
+      const filterRemoveFavorites = state.filter(
         (item) => item.id !== action.payload,
       );
-      return FavoritesFirstWordSort(filterFavorites);
+      return favoritesFirstWordSort(filterRemoveFavorites);
+
     default:
       return state;
   }
