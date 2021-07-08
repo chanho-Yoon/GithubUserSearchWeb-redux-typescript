@@ -27,7 +27,6 @@ function search(state = initialState, action: SearchActionType) {
     case GET_SEARCH_WORD:
       return state.word;
     case SET_SEARCH_WORD:
-      console.log('여기 실행');
       console.log();
       return { ...state, word: action.payload };
     default:
