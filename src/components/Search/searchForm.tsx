@@ -42,7 +42,7 @@ const Wraaper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 40%;
   height: 40px;
   margin-top: 20px;
   border-radius: 15px;
@@ -65,7 +65,6 @@ const Wraaper = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 15%;
       font-size: 2.3rem;
       cursor: pointer;
     }

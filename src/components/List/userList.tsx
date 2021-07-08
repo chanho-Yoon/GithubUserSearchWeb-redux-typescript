@@ -20,7 +20,10 @@ const UserList = () => {
 export default UserList;
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 75%;
   display: flex;
   justify-content: center;
+  ul {
+    width: 100%;
+  }
 `;

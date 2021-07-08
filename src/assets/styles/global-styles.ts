@@ -68,7 +68,12 @@ const GlobalStyle = createGlobalStyle`
     input, button {
         outline: none;
     }
-    @media (min-width: 0px) and (max-width: 700px) {
+    @media (min-width: 0px) and (max-width: 400px) {
+        html {
+            font-size: 6px !important;
+        }
+    }
+    @media (min-width: 400px) and (max-width: 700px) {
         html {
             font-size: 9px !important;
         }

@@ -44,7 +44,6 @@ const btnBackColorFade = keyframes`
 
 const Wrapper = styled.div`
   width: 66%;
-  height: 40px;
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -53,6 +52,7 @@ const Wrapper = styled.div`
 
   button {
     width: 50%;
+    padding: 13px 0;
     cursor: pointer;
     font-weight: 700;
     font-size: 1.3rem;

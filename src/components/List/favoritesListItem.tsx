@@ -42,7 +42,7 @@ const Li = styled.li`
   .first_word {
     position: absolute;
     top: 15px;
-    left: -90px;
+    left: -40px;
     width: 10px;
     padding: 0 20px 0 0;
     border-right: 5px solid #00c400;
@@ -57,7 +57,7 @@ const Li = styled.li`
 
   span {
     width: 350px;
-    padding-left: 40px;
+    padding-left: 20px;
     font-size: 1.5rem;
   }
 

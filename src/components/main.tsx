@@ -23,21 +23,16 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   max-width: 800px;
-  min-width: 600px;
+  max-height: 800px;
   height: 100%;
-  margin: 40px;
   padding: 20px;
   background-color: #fcfcfc;
-  border-radius: 35px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 
 const Header = styled.header`
-  width: 50%;
+  width: 100%;
   height: 35px;
-  margin-top: 20px;
   text-align: center;
-
   h1 {
     font-size: 3.5rem;
     font-weight: 700;
