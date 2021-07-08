@@ -3,27 +3,20 @@ import styled from 'styled-components';
 import { Favorites } from '../../modules/favorites';
 import useGetFavorites from '../../hooks/favorites/useGetFavorites';
 import FavoritesListItem from './favoritesListItem';
+import ListWrapperStyle from '../../assets/styles/listWrapperStyle';
+import ListUlStyle from '../../assets/styles/listUlStyle';
 
-const FavoriteslList = () => {
+const FavoritesList = () => {
   const getFavorites = useGetFavorites();
   return (
-    <Wrapper>
-      <ul>
+    <ListWrapperStyle>
+      <ListUlStyle>
         {getFavorites?.map((item: Favorites) => (
           <FavoritesListItem key={item.id} user={item} />
         ))}
-      </ul>
-    </Wrapper>
+      </ListUlStyle>
+    </ListWrapperStyle>
   );
 };
 
-export default FavoriteslList;
-
-const Wrapper = styled.div`
-  width: 75%;
-  display: flex;
-  justify-content: center;
-  ul {
-    width: 100%;
-  }
-`;
+export default FavoritesList;

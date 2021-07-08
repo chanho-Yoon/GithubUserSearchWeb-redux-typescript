@@ -9,6 +9,7 @@ export default function useGetFavorites() {
   const getSearchWord = useGetSearch();
   const stateFavorites = useSelector((state: RootState) => state.favorites);
   const getLocalStorageItems = useGetLocalDatas()();
+
   if (
     Array.isArray(stateFavorites) &&
     stateFavorites.length === 0 &&

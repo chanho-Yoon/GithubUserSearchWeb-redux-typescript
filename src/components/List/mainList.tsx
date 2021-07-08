@@ -19,9 +19,9 @@ const Wrapper = styled.div`
   justify-content: center;
   width: 100%;
   height: 600px;
-  padding: 30px;
+  padding: 0 30px;
   margin-top: 20px;
   border-radius: 30px;
-  overflow: scroll;
+  overflow: auto;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
 `;
