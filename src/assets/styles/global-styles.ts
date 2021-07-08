@@ -32,15 +32,26 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     font-family: 'Ubuntu', sans-serif;
     background-color: #fcfcfc;
-    body {
-      height: 100%;
-      #root {
-        height: 100%;
-        display: flex;
-        align-items: center;
-      }
+    @media (min-width: 0px) and (max-width: 480px) {
+      font-size: 6px !important;
+    }
+    @media (min-width: 481px) and (max-width: 767px) {
+      font-size: 7px !important;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 10px !important;
+    }
+    @media (min-width: 1025px) {
+      font-size: 11px !important;
     }
   }
+  body {
+    height: 100%;
+    #root {
+      height: 100%;
+    }
+  }
+  
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
@@ -78,20 +89,6 @@ const GlobalStyle = createGlobalStyle`
   input, button {
     outline: none;
   }
-  @media (min-width: 0px) and (max-width: 500px) {
-    html {
-      font-size: 6px !important;
-    }
-  }
-  @media (min-width: 500px) and (max-width: 700px) {
-    html {
-      font-size: 9px !important;
-    }
-  }
-  @media all and (min-width: 700px) {
-    html {
-      font-size: 11px !important;
-    }
-  }
+
 `;
 export default GlobalStyle;

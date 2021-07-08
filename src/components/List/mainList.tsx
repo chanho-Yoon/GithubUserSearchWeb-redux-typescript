@@ -18,15 +18,18 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 500px;
-  @media (min-width: 0px) and (max-width: 500px) {
-    height: 350px;
+  height: 100%;
+  @media (min-width: 0px) and (max-width: 480px) {
+    max-height: 350px;
   }
-  @media (min-width: 500px) and (max-width: 1024px) {
-    height: 550px;
+  @media (min-width: 481px) and (max-width: 767px) {
+    max-height: 500px;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    max-height: 550px;
   }
   @media (min-width: 1025px) {
-    height: 700px;
+    max-height: 550px;
   }
   padding: 0 30px;
   margin-top: 20px;

@@ -7,8 +7,8 @@ const ListLiStyle = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 0 20px 0;
-  @media (min-width: 0px) and (max-width: 500px) {
+  margin: 0 0 15px 0;
+  @media (min-width: 0px) and (max-width: 767px) {
     margin: 0 0 5px 0;
   }
   &:first-child {
