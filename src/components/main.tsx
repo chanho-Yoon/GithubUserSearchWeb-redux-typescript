@@ -22,12 +22,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 800px;
-  max-height: 800px;
+  max-width: 750px;
   height: 100%;
-  @media (min-width: 0px) and (max-width: 500px) {
-    height: 75%;
-  }
   padding: 20px;
   background-color: #fcfcfc;
 `;

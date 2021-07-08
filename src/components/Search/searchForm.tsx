@@ -43,7 +43,7 @@ const Wraaper = styled.div`
   justify-content: center;
   align-items: center;
   width: 40%;
-  height: 40px;
+  height: 35px;
   margin-top: 20px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
