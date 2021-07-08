@@ -51,3 +51,5 @@
 문제점이 발생하였다. <br> 
 검색 필터처리는 state값을 직접 건드리지 않고 컴포넌트에서 필터 처리된 리스트만 보여주면 되겠다 싶었다. 
 그렇게 하기 위해 search라는 상태 관리를 추가해 구현하였다.
+
+[배포 AWS amplify](https://main.dbtepoau2lfan.amplifyapp.com/)
