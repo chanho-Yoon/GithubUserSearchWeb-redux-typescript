@@ -1,6 +1,6 @@
 # GithubUserSearchWeb (react redux, typescript) 버전
 깃허브 유저이름으로 아이디를 찾는 간단한 웹 <br>
-> 모바일 버전은 아직 미구현
+> Chrome, safari 브라우저에서 테스트 확인
 
 [배포 AWS amplify](https://main.dbtepoau2lfan.amplifyapp.com/)
 
