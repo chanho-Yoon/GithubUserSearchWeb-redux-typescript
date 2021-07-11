@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import SearchForm from './Search/searchForm';
-import TabMenu from './Tab/tabMenu';
-import MainList from './List/mainList';
+import SearchForm from './search/searchForm';
+import TabMenu from './tab/tabMenu';
+import MainList from './list/mainList';
 
 const Main = () => {
   return (
@@ -32,6 +32,7 @@ const Header = styled.header`
   width: 100%;
   height: 35px;
   text-align: center;
+
   h1 {
     font-size: 3.5rem;
     font-weight: 700;

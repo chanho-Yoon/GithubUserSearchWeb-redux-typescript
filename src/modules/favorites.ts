@@ -65,21 +65,16 @@ function favoritesFirstWordSort(item: Favorites[]) {
     return [];
   }
 
-  const sortFavorites = item.sort((a, b) => {
-    return a.login < b.login ? -1 : 1;
-  });
-  const resetFirstWord = sortFavorites.map((data) => {
-    return { ...data, isFirstWord: '' };
-  });
-
-  return resetFirstWord.map((data) => {
-    if (acc !== data.login.slice(0, 1)) {
-      acc = data.login.slice(0, 1);
-      return { ...data, isFirstWord: data.login.slice(0, 1) };
-    } else {
-      return data;
-    }
-  });
+  return item
+    .sort((a, b) => (a.login < b.login ? -1 : 1))
+    .map((data) => {
+      if (acc !== data.login.slice(0, 1)) {
+        acc = data.login.slice(0, 1);
+        return { ...data, isFirstWord: data.login.slice(0, 1) };
+      } else {
+        return { ...data, isFirstWord: '' };
+      }
+    });
 }
 
 function favorites(state = initialState, action: FavoritesActionType) {
@@ -90,7 +85,6 @@ function favorites(state = initialState, action: FavoritesActionType) {
     case ADD_FAVORITES:
       const bindFavorites = [...state, action.payload];
       return favoritesFirstWordSort(bindFavorites);
-
     case REMOVE_FAVORITES:
       const filterRemoveFavorites = state.filter(
         (item) => item.id !== action.payload,

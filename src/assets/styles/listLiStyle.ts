@@ -14,10 +14,6 @@ const ListLiStyle = styled.li`
   &:first-child {
     margin-top: 15px;
   }
-  &:last-child {
-    display: inline-flex;
-    margin-bottom: 15px;
-  }
   .first_word {
     position: absolute;
     top: 15px;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import useTabSelect from '../../hooks/actions/useTabSelect';
-import useGetTabIndex from '../../hooks/actions/useTab';
+import useTabSelect from '../../hooks/tab/useTabSelect';
+import useGetTabIndex from '../../hooks/tab/useTab';
 
 const TabMenu = () => {
   const tabSelect = useTabSelect();

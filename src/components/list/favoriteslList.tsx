@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Favorites } from '../../modules/favorites';
 import useGetFavorites from '../../hooks/favorites/useGetFavorites';
 import FavoritesListItem from './favoritesListItem';

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import FavoriteslList from './favoriteslList';
 import UserList from './userList';
-import useGetTabIndex from '../../hooks/actions/useTab';
+import useGetTabIndex from '../../hooks/tab/useTab';
 
 const MainList = () => {
   const tabIndex = useGetTabIndex();

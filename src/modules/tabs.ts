@@ -1,6 +1,6 @@
 type TabActionType = ReturnType<typeof tabClickNumber>;
 
-const TAB_CLICK_NUMBER = <const>'actions/TAB_CLICK_NUMBER';
+const TAB_CLICK_NUMBER = <const>'tab/TAB_CLICK_NUMBER';
 
 export const tabClickNumber = (tab: number) => ({
   type: TAB_CLICK_NUMBER,

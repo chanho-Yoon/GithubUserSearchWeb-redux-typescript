@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { FaGithubAlt } from 'react-icons/fa';
 import useRemoveLocalDatas from '../../hooks/localstorage/useRemoveLocalDatas';
 import { FavoritesObj } from '../../modules/favorites';
