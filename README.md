@@ -1,6 +1,6 @@
 # GithubUserSearchWeb (react redux, typescript) 버전
 깃허브 유저이름으로 아이디를 찾는 간단한 웹 <br>
-> Chrome, safari 브라우저에서 테스트 확인
+> Chrome, safari 브라우저에서 테스트 확인 / redux와 typescript를 공부하기 위해 만들어본 간단한 프로젝트 입니다.
 
 [배포 AWS amplify](https://main.dbtepoau2lfan.amplifyapp.com/)
 
@@ -11,7 +11,7 @@
 
 - [x] 유저(name) 검색 
 - [x] 유저 즐겨찾기 추가 및 삭제
-- [x] 유저 리스트 첫 단어를 기준으로 첫 아이템에만 초성이 출력
+- [x] 유저 리스트에서 첫 문자 ex) a,b,c 가 바뀌는 시점에만 첫 문자를 출력
 - [x] 즐겨찾기 조회 및 삭제
 - [x] 즐겨찾기 검색 
 
